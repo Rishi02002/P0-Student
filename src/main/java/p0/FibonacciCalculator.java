@@ -16,4 +16,26 @@ public interface FibonacciCalculator {
      * @throws IllegalArgumentException if {@code n} is non-positive
      */
     int get(int n);
+    if ( n < 0 ) {
+    throw new IllegalArgumentException ( " not Possible " );
+    }
+
+
+    if ( n == 1 || n == 2 ) {
+    return 1; 
+    }
+
+ int first = 1;
+     int second = 1;
+for ( int i = 3; i <= n ; i++ ) {
+
+    int Sum = first + second ;
+
+    first = second; 
+    second = Sum;
+}
+return second;
+
+}
+
 }
